@@ -1,4 +1,4 @@
 # Spring-boot-
-Spring boot projects
-
-hey welcome to my github profile
+To do list using java spring boot
+used html and css for frontend
+H2 database
