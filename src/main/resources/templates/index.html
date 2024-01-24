@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmln:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta  http-eqiv="X-UA_compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css}" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>To DO List</h1>
+			<hr />
+			
+			<table class="table table-bordered table-striped">
+				<thread>
+					<tr>
+						<th>Id</th>
+						<th>Description</th>
+						<th>Is Complete</th>
+						<th>Actions</th>
+					</tr>
+				</thread>
+				<tbody>
+					<tr th:each="item: ${todoitems}">
+						
+						<td th:text="${item.id}"></td>
+						<td th:text="${item.title}"></td>
+						<td>
+							<span th:if="${item.done}==true" th:text="Yes"/>
+							<span th:unless="${item.done}==true" th:text="No"/>
+						</td>
+						<td>
+							<a class="btn btn-info" th:href="@{/edit/{id}(id=${item.id})}">
+								<i class="bi bi-pencil-fill"></i>Edit
+							</a>
+							<a class="btn btn-danger" th:href="@{/delete/{id}(id=${item.id})}">
+								<i class="bi bi-trash-fill"></i>Delete
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<a class="btn btn-outline-success" href="/create">
+					<i class="bi bi-plus-square-fill"></i>Create a todo
+				</a>
+			</p>
+		</div>
+		
+		<script th:src="@{/webjars/bootstrap/5.2.2/js/bootstrap.min.js}"></script>
+			
+	</body>
+</html>
