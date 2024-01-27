@@ -1,4 +1,7 @@
-# Spring-boot-
-To do list using java spring boot
-used html and css for frontend
-H2 database
+To do list web app using springboot web framework
+
+Made using spring boot web framework.
+Frontend coded in html and css.
+Backend coded in java.
+H2 database used for storing data. 
+
