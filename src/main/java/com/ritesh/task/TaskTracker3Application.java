@@ -1,13 +1,13 @@
-package com.ritesh.todo;
+package com.ritesh.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Todolist3Application {
+public class tasktracker3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Todolist3Application.class, args);
+		SpringApplication.run(tasktracker3Application.class, args);
 	}
 
 }

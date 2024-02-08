@@ -1,4 +1,4 @@
-package com.ritesh.todo.model;
+package com.ritesh.task.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,8 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Todo_items")
-public class todoitem {
+@Table(name = "task_items")
+public class taskitem {
 	
 	@Id
 	@GeneratedValue
@@ -17,13 +17,13 @@ public class todoitem {
 	private boolean done;
 	
 	
-	public todoitem()
+	public taskitem()
 	{
 		
 	}
 
 
-	public todoitem(long id, String title, boolean done) {
+	public taskitem(long id, String title, boolean done) {
 		super();
 		this.id = id;
 		this.title = title;
